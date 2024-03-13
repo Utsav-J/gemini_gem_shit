@@ -1,13 +1,15 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter/material.dart';
 import 'package:gemini_gem_shit/message.dart';
-import 'package:gemini_gem_shit/message_controller.dart';
+import 'package:gemini_gem_shit/controllers/message_controller.dart';
 import 'package:gemini_gem_shit/secrets/secrets.dart';
 import 'package:get/get.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
 import 'package:intl/intl.dart';
+import 'package:get_storage/get_storage.dart';
 
-void main() {
+void main() async {
+  await GetStorage.init();
   runApp(
     GetMaterialApp(
       debugShowCheckedModeBanner: false,
